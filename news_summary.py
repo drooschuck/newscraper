@@ -116,7 +116,7 @@ def job():
     print("Creating audio message...")
     audio_file = create_audio_message(combined_news)
     print("Sending email...")
-    send_email("recipient@example.com", audio_file)  # Update this with your recipient email
+    send_email("drooschuck@gmail.com", audio_file)  # Update this with your recipient email
     print("Job complete!")
 
 # Run job once (for GitHub Action trigger)
