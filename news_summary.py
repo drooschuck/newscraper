@@ -50,7 +50,7 @@ def create_audio_message(news_summary):
 
 # Function to scrape news from BBC
 def scrape_bbc_news():
-    url = 'https://www.bbc.com/news'
+    url = 'https://www.bbc.co.uk/news'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
     headlines = soup.find_all('h3', limit=5)
@@ -61,7 +61,7 @@ def scrape_bbc_news():
 
 # Function to scrape news from Sky News
 def scrape_sky_news():
-    url = 'https://news.sky.com/'
+    url = 'https://news.sky.com/uk'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
     headlines = soup.find_all('h3', limit=5)
@@ -72,7 +72,7 @@ def scrape_sky_news():
 
 # Function to scrape news from The Times
 def scrape_the_times_news():
-    url = 'https://www.thetimes.co.uk/'
+    url = 'https://www.thetimes.com/uk'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
     headlines = soup.find_all('h3', limit=5)
