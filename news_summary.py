@@ -21,7 +21,7 @@ def split_text(text, max_chars=200):
             chunks.append(current_chunk.strip())
             current_chunk = word + " "
         else:
-            current_chunk += word + " "
+            current_chunk += word + " " 
 
     if current_chunk:
         chunks.append(current_chunk.strip())
