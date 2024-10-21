@@ -53,11 +53,12 @@ def scrape_bbc_news():
     url = 'https://www.bbc.co.uk/news'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
-    headlines = soup.find_all('h3', limit=5)
+    headlines = soup.find_all('h1', class="ssrcss-1s9pby4-Heading e10rt3ze0", limit=5)
     news_summary = "BBC News Headlines:\n"
     for idx, headline in enumerate(headlines, 1):
         news_summary += f"{idx}. {headline.get_text().strip()}\n"
     return news_summary
+    print news_summary
 
 # Function to scrape news from Sky News
 def scrape_sky_news():
