@@ -43,7 +43,7 @@ def create_audio_message(news_summary):
         combined_audio += audio_segment
         os.remove(temp_filename)
 
-    final_filename = "news_summary.mp3"
+    final_filename = "news_summary.mp3" 
     combined_audio.export(final_filename, format="mp3")
     
     return final_filename
