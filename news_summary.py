@@ -58,7 +58,7 @@ def scrape_bbc_news():
     for idx, headline in enumerate(headlines, 1):
         news_summary += f"{idx}. {headline.get_text().strip()}\n"
     return news_summary
-    print news_summary
+    print (news_summary)
 
 # Function to scrape news from Sky News
 def scrape_sky_news():
