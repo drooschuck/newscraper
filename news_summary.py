@@ -57,7 +57,7 @@ def scrape_bbc_news():
     news_summary = "BBC News Headlines:\n"
     for idx, headline in enumerate(headlines, 1):
         news_summary += f"{idx}. {headline.get_text().strip()}\n"
-         print (news_summary)
+         
     return news_summary
    
 
